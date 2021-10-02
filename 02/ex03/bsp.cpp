@@ -6,7 +6,7 @@
 /*   By: dohelee <dohelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 14:29:41 by dohelee           #+#    #+#             */
-/*   Updated: 2021/10/02 19:50:32 by dohelee          ###   ########.fr       */
+/*   Updated: 2021/10/02 19:54:11 by dohelee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ bool bsp( Point const a, Point const b, Point const c, Point const point)
 	{
 		// 0,1 선분, 1,2선분, ... , n-1,n 선분 조사 n,0 선분 조사(cross조사)
 		int j = ( i + 1 ) % 3;
-		//점(point)이 선분(m_apnt[i], m_apnt[j])의 y좌표 사이에 있음
+		//점(point)이 선분(polygon[i], polygon[j])의 y좌표 사이에 있음
 		if( (polygon[i].getY().toFloat() > point.getY().toFloat()) != (polygon[j].getY().toFloat() > point.getY().toFloat()) )
 		{
-			//atX는 점(point)을 지나는 수평선과 선분(m_apnt[i], m_apnt[j])의 교점
+			//atX는 점(point)을 지나는 수평선과 선분(polygon[i], polygon[j])의 교점
 			double atX = (
 				((polygon[j].getX().toFloat() - polygon[i].getX().toFloat()) / (polygon[j].getY().toFloat() - polygon[i].getY().toFloat())) 
 				* (point.getY().toFloat() - polygon[i].getY().toFloat())
