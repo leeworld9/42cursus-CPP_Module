@@ -6,7 +6,7 @@
 /*   By: dohelee <dohelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 00:00:04 by dohelee           #+#    #+#             */
-/*   Updated: 2021/10/04 13:19:48 by dohelee          ###   ########.fr       */
+/*   Updated: 2021/10/04 15:25:53 by dohelee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), Scav
 	this->dName = name;
 	//FragTrap이 마지막으로 생성됬기때문에 4개 변수 모두 FragTrap 값으로 초기화 됬음
 	//때문에, Scavtrap 값으로 초기화 할 값이 있으면 아래 처럼 다시 할당해줘야함.
-	this->setEnergyPoint(50); 
+	this->energy_point = 50; 
 }
 
 DiamondTrap::~DiamondTrap()
@@ -57,7 +57,7 @@ void DiamondTrap::attack(std::string const & target)
 
 void	DiamondTrap::whoAmI()
 {
-	std::cout << "[DiamondTrap] " << "This DiamondTrap name is " << this->dName << " and This ClapTrap name is " << ClapTrap::getName() << std::endl;
+	std::cout << "[DiamondTrap] " << "This DiamondTrap name is " << this->dName << " and This ClapTrap name is " << this->name << std::endl;
 }
 
 // void DiamondTrap::test()

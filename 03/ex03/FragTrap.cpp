@@ -6,7 +6,7 @@
 /*   By: dohelee <dohelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 22:31:03 by dohelee           #+#    #+#             */
-/*   Updated: 2021/10/04 13:18:40 by dohelee          ###   ########.fr       */
+/*   Updated: 2021/10/04 15:19:57 by dohelee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ FragTrap::FragTrap()
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
 	std::cout << "[FragTrap] Constructor called" << std::endl;
-	this->setHitPoint(100);
-	this->setEnergyPoint(100);
-	this->setAttackDamage(30);
+	this->hit_point = 100;
+	this->energy_point = 100;
+	this->attack_damage = 30;
 }
 
 FragTrap::~FragTrap()
@@ -48,11 +48,11 @@ FragTrap& FragTrap::operator=(const FragTrap& op)
 
 void FragTrap::attack(std::string const & target)
 {
-	std::cout << "[FragTrap] " << ClapTrap::getName() << " attacks " << target << \
-			", causing " << ClapTrap::getAttackDamage() <<" points of damage!" << std::endl;
+	std::cout << "[FragTrap] " << this->name << " attacks " << target << \
+			", causing " << this->attack_damage <<" points of damage!" << std::endl;
 }
 
 void FragTrap::highFivesGuys()
 {
-	std::cout << "[FragTrap] " << ClapTrap::getName() <<  " try positive high fives" << std::endl;
+	std::cout << "[FragTrap] " << this->name <<  " try positive high fives" << std::endl;
 }

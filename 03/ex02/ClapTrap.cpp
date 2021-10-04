@@ -6,7 +6,7 @@
 /*   By: dohelee <dohelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 23:46:38 by dohelee           #+#    #+#             */
-/*   Updated: 2021/10/03 23:11:14 by dohelee          ###   ########.fr       */
+/*   Updated: 2021/10/04 15:17:36 by dohelee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,44 +69,4 @@ void ClapTrap::beRepaired(unsigned int amount)
 	this->hit_point += amount;
 	if (hit_point >= 10)
 		this->hit_point = 10; // 최댓값 10이라고 상정
-}
-
-void ClapTrap::setName(std::string name)
-{
-	this->name = name;
-}
-
-void ClapTrap::setHitPoint(int hit_point)
-{
-	this->hit_point = hit_point;
-}
-
-void ClapTrap::setEnergyPoint(int energy_point)
-{
-	this->energy_point = energy_point;
-}
-
-void ClapTrap::setAttackDamage(int attack_damage)
-{
-	this->attack_damage = attack_damage;
-}
-
-std::string ClapTrap::getName()
-{
-	return (this->name);
-}
-
-int ClapTrap::getHitPoint()
-{
-	return (this->hit_point);
-}
-
-int ClapTrap::getEnergyPoint()
-{
-	return (this->energy_point);
-}
-
-int ClapTrap::getAttackDamage()
-{
-	return (this->attack_damage);
 }

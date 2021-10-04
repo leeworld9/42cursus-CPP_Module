@@ -6,7 +6,7 @@
 /*   By: dohelee <dohelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 23:40:26 by dohelee           #+#    #+#             */
-/*   Updated: 2021/10/04 13:11:45 by dohelee          ###   ########.fr       */
+/*   Updated: 2021/10/04 15:29:35 by dohelee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ int	main(void)
 
 		c.highFivesGuys();
 		b.attack("C");
-		c.takeDamage(b.getAttackDamage());
+		c.takeDamage(30);
 		b.attack("C");
-		c.takeDamage(b.getAttackDamage());
+		c.takeDamage(30);
 		b.guardGate();
 	}
 	DiamondTrap d("D");

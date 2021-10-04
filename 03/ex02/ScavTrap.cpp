@@ -6,7 +6,7 @@
 /*   By: dohelee <dohelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 00:22:12 by dohelee           #+#    #+#             */
-/*   Updated: 2021/10/04 13:18:18 by dohelee          ###   ########.fr       */
+/*   Updated: 2021/10/04 15:16:51 by dohelee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ ScavTrap::ScavTrap()
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
 	std::cout << "[ScavTrap] Constructor called" << std::endl;
-	this->setHitPoint(100);
-	this->setEnergyPoint(50);
-	this->setAttackDamage(20);
+	this->hit_point = 100;
+	this->energy_point = 50;
+	this->attack_damage = 20;
 }
 
 ScavTrap::~ScavTrap()
@@ -48,11 +48,11 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& op)
 
 void ScavTrap::attack(std::string const & target)
 {
-	std::cout << "[ScavTrap] " << ClapTrap::getName() << " attacks " << target << \
-			", causing " << ClapTrap::getAttackDamage() <<" points of damage!" << std::endl;
+	std::cout << "[ScavTrap] " << this->name << " attacks " << target << \
+			", causing " << this->attack_damage <<" points of damage!" << std::endl;
 }
 
 void ScavTrap::guardGate()
 {
-	std::cout << "[ScavTrap] " << ClapTrap::getName() <<  " have enterred in Gate keeper mode" << std::endl;
+	std::cout << "[ScavTrap] " << this->name <<  " have enterred in Gate keeper mode" << std::endl;
 }
