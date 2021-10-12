@@ -6,7 +6,7 @@
 /*   By: dohelee <dohelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 22:28:33 by dohelee           #+#    #+#             */
-/*   Updated: 2021/10/12 22:38:20 by dohelee          ###   ########.fr       */
+/*   Updated: 2021/10/13 01:31:08 by dohelee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,10 @@ float Convert::baseFloat(std::string str)
 
 	try
 	{
-		if (str.size() == 1)
-		{
-			if (str[0] >= '0' && str[1] <= '9') // bash와 zshell로 매개변수 받아오는 로직이 다르기 때문에 좀 더 고민이 필요한 부분
-				str[0] -= 48;
-			return (static_cast<float>(str[0]));
-		}
+		if (str.size() == 3
+			&& str[0] == '\''
+			&& str[2] == '\'')
+			return (static_cast<float>(str[1]));
 		base = std::stof(str);
 	}
 	catch (std::exception &e)
