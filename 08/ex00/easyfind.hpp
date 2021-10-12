@@ -6,7 +6,7 @@
 /*   By: dohelee <dohelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 04:03:06 by dohelee           #+#    #+#             */
-/*   Updated: 2021/10/11 20:59:51 by dohelee          ###   ########.fr       */
+/*   Updated: 2021/10/13 03:48:49 by dohelee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,12 @@ class NotFound : public std::exception
     virtual const char* what() const throw() { return ("Not found."); }
 };
 
-// STL container eneric template
-//   ex) Vector -> template < class T, class Alloc = allocator<T> > class vector
-// reference 1 : https://www.cplusplus.com/reference/vector/vector/?kw=vector
-// reference 2 : https://docs.microsoft.com/ko-kr/cpp/cpp/templates-cpp?view=msvc-160
+// reference : https://browoo.tistory.com/221
 
-template <template <typename A, typename B> class T,
-		typename A = int, 
-		typename B = std::allocator<int>
-		>
-typename T<A, B>::iterator easyfind(T<A, B> &array, int n)
+template <class T>
+typename T::iterator easyfind(T& array, int n)
 {
-	typename T<A, B>::iterator itpos;
+	typename T::iterator itpos;
     if ((itpos = std::find(array.begin(), array.end(), n)) != array.end())
         return (itpos);
     else
