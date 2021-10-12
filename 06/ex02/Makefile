@@ -6,12 +6,12 @@
 #    By: dohelee <dohelee@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/23 21:59:27 by dohelee           #+#    #+#              #
-#    Updated: 2021/10/10 23:01:44 by dohelee          ###   ########.fr        #
+#    Updated: 2021/10/12 20:52:15 by dohelee          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = clang++
-CFLAGS = #-Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
 NAME = main
 

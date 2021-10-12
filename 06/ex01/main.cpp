@@ -6,7 +6,7 @@
 /*   By: dohelee <dohelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 16:24:37 by dohelee           #+#    #+#             */
-/*   Updated: 2021/10/10 22:18:14 by dohelee          ###   ########.fr       */
+/*   Updated: 2021/10/12 22:40:36 by dohelee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ int main()
 	Data *origin = new Data;
 	std::cout << "Data Size : " << sizeof(struct Data) << std::endl;
 
-	//현재 string의 길이는 15까지만 가능, 그 이상될 경우 할당된 메모리가 달라서 수정필요
 	origin->s1 = "12345671231";
 	origin->s2 = "10987654321";
 	std::cout << "origin ptr : " << origin << std::endl;
