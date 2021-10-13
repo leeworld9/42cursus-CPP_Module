@@ -6,7 +6,7 @@
 /*   By: dohelee <dohelee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 04:03:06 by dohelee           #+#    #+#             */
-/*   Updated: 2021/10/13 03:48:49 by dohelee          ###   ########.fr       */
+/*   Updated: 2021/10/13 15:25:11 by dohelee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,17 @@ class NotFound : public std::exception
     virtual const char* what() const throw() { return ("Not found."); }
 };
 
-// reference : https://browoo.tistory.com/221
+// STL container eneric template
+//   ex) Vector -> template < class T, class Alloc = allocator<T> > class vector
+// reference 1 : https://www.cplusplus.com/reference/vector/vector/?kw=vector
+// reference 2 : https://browoo.tistory.com/221
+// reference 3 : https://stackoverflow.com/questions/213761/what-are-some-uses-of-template-template-parameters
+//※ Template default arguments is can not be used because it is defined in c++11
 
-template <class T>
-typename T::iterator easyfind(T& array, int n)
+template <template <class , class> class T>
+typename T<int, std::allocator<int>>::iterator easyfind(T<int, std::allocator<int>> &array, int n)
 {
-	typename T::iterator itpos;
+    typename T<int, std::allocator<int> >::iterator itpos;
     if ((itpos = std::find(array.begin(), array.end(), n)) != array.end())
         return (itpos);
     else
