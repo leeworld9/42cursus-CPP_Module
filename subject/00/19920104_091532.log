@@ -1,0 +1,69 @@
+/* ************************************************************************** */
+/*																			*/
+/*														:::	  ::::::::   */
+/*   main.cpp										   :+:	  :+:	:+:   */
+/*													+:+ +:+		 +:+	 */
+/*   By: dohelee <dohelee@student.42seoul.kr>	   +#+  +:+	   +#+		*/
+/*												+#+#+#+#+#+   +#+		   */
+/*   Created: 2021/10/11 00:17:41 by dohelee		   #+#	#+#			 */
+/*   Updated: 2021/10/11 00:48:10 by dohelee		  ###   ########.fr	   */
+/*																			*/
+/* ************************************************************************** */
+
+# include "whatever.hpp"
+
+int main()
+{
+	int i1, i2;
+	double d1, d2;
+	char c1, c2;
+
+	// SWAP
+	i1 = 10;
+	i2 = 20;
+	std::cout << "Swap(befor) i1 = " << i1 << " && i2 = " << i2 << std::endl;
+	swap<int>(i1, i2);
+	std::cout << "Swap(after) i1 = " << i1 << " && i2 = " << i2 << std::endl;
+	d1 = 8.65;
+	d2 = 12.555;
+	std::cout << "Swap(befor) d1 = " << d1 << " && d2 = " << d2 << std::endl;
+	swap<double>(d1, d2);
+	std::cout << "Swap(after) d1 = " << d1 << " && d2 = " << d2 << std::endl;
+	c1 = 'p';
+	c2 = 'o';
+	std::cout << "Swap(befor) c1 = " << c1 << " && c2 = " << c2 << std::endl;
+	swap<char>(c1, c2);
+	std::cout << "Swap(after) c1 = " << c1 << " && c2 = " << c2 << std::endl;
+
+	std::string c = "chaine1";
+	std::string d = "chaine2";
+	::swap(c, d);
+	std::cout << "c = " << c << ", d = " << d << std::endl;
+	std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
+	std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
+
+	std::cout << std::endl;
+
+	//MIN
+	std::cout << "Min entre i1 = " << i1 << " && i2 = " << i2 << " : " << std::endl;
+	std::cout << "Min = " << min(i1, i2) << std::endl;
+	std::cout << "Min entre d1 = " << d1 << " && d2 = " << d2 << " : " << std::endl;
+	std::cout << "Min = " << min(d1, d2) << std::endl;
+	std::cout << "Min entre c1 = " << c1 << " && c2 = " << c2 << " : " << std::endl;
+	std::cout << "Min = " << min(c1, c2) << std::endl;
+
+	//MAX
+	i1 = -157;
+	i2 = 85694;
+	std::cout << "Max entre i1 = " << i1 << " && i2 = " << i2 << " : " << std::endl;
+	std::cout << "Max = " << max(i1, i2) << std::endl;
+	d1 = 896.68842;
+	d2 = 17.66;
+	std::cout << "Max entre d1 = " << d1 << " && d2 = " << d2 << " : " << std::endl;
+	std::cout << "Max = " << max(d1, d2) << std::endl;
+	c1 = 'A';
+	c2 = 'a';
+	std::cout << "Max entre c1 = " << c1 << " && c2 = " << c2 << " : " << std::endl;
+	std::cout << "Max = " << max(c1, c2) << std::endl;
+	return (0);
+}
