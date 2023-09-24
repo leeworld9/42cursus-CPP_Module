@@ -2,7 +2,7 @@
 # CPP Module
 - CPP Module : **42cursus (4 Circle)**
    - Status : Finished
-   - Completed date : 2021/10/13
+   - Completed Date : 2021/10/13
    - Evaluation : <span style="color: #008000">Success</sapn>
    - Score : <span style="color: #008000">100%</sapn>
 
